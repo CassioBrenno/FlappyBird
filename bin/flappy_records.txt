@@ -1,0 +1,18 @@
+# Flappy Bird Records e Perfis
+highNormalGlobal=0
+highHardGlobal=0
+
+# Normal Profiles
+normal.1.name=
+normal.2.name=
+normal.3.name=
+normal.4.name=
+normal.5.name=
+normal.6.name=
+# Hard Profiles
+hard.1.name=
+hard.2.name=
+hard.3.name=
+hard.4.name=
+hard.5.name=
+hard.6.name=
