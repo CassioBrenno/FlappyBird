@@ -1,0 +1,6 @@
+# Pastas
+
+.vscode/
+bin/
+src/*.class
+src/*.java

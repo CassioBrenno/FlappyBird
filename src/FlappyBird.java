@@ -203,6 +203,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener, M
     long bulletInterval = 3000;
     long pipeAccumulator = 0;
     long bulletAccumulator = 0;
+    private boolean jumpHeld = false;
     Timer gameLoop;
     
     
@@ -2525,11 +2526,11 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener, M
             }
         }
         if (currentState == GameState.JOGANDO) {
-            if (countdown > 0 || paused) return;
             if (key == jumpKey) {
-                if (controlMode != ControlMode.MOUSE_ONLY) {
+                if (controlMode != ControlMode.MOUSE_ONLY && !jumpHeld) {
                     velocityY = jumpStrength;
                     playWing();
+                    jumpHeld = true;
                 }
             }
             if (key == pauseKey) {
@@ -3137,6 +3138,11 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener, M
     @Override
     public void keyReleased(KeyEvent e) {
         int key = e.getKeyCode();
+
+        if (key == jumpKey) {
+            jumpHeld = false;
+        }
+
         if (currentState == GameState.DIGITAR_NOME_PERFIL) {
             if (key == KeyEvent.VK_SHIFT) {
                 physicalShiftHeld = false;
