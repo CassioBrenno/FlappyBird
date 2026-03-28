@@ -1,0 +1,6 @@
+# Flappy Bird Configurações
+controlMode=KEYBOARD_AND_MOUSE
+volumeEffects=0.7090909
+volumeMusic=0.70000005
+jumpKey=32
+pauseKey=80
